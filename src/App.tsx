@@ -8,23 +8,22 @@ import {useRecoilValue} from 'recoil'
 
 const Home = () => {
     return (
-        <Page>
+        <>
             <Header />
             <Stats />
             <Tasks />
             <Input />
-        </Page>
+        </>
     )
 }
 
 const App = () => {
     const darkMode = useRecoilValue(darkModeState)
-
     return (
         <ThemeProvider darkMode={darkMode}>
-            <GlobalStyles />
+             <GlobalStyles />
             <Home />
-        </ThemeProvider>
+          </ThemeProvider>
     )
 }
 
